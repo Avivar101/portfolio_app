@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:';
 
 
 class MyHomePage extends StatelessWidget {
@@ -6,6 +7,8 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("portfolio page");
+    return Scaffold(
+      body: SlidingUpPanel(),
+    );
   }
 }
