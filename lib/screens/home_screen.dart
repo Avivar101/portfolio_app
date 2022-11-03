@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:';
+
+import '../widgets/profile_widget.dart';
 
 
 class MyHomePage extends StatelessWidget {
@@ -8,7 +9,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SlidingUpPanel(),
+      body: ProfileDetails(),
     );
   }
 }
