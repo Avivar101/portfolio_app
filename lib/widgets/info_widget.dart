@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/widgets/portfolio.dart';
+import 'package:portfolio_app/widgets/resume.dart';
+import 'package:portfolio_app/widgets/skills.dart';
 
 class InfoDetails extends StatelessWidget {
   const InfoDetails({Key? key}) : super(key: key);
@@ -11,22 +14,35 @@ class InfoDetails extends StatelessWidget {
       child: DefaultTabController(
           length: 3,
           child: Scaffold(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.transparent,
             appBar: PreferredSize(
               preferredSize: Size.fromHeight(50),
               child: TabBar(
+                indicatorColor: Colors.black,
                 tabs: [
-                  Text( "Portfolio", style: TextStyle(),),
-                  Text("Skills"),
-                  Text("Resume"),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                    child: Text( "Portfolio",
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                    child: Text( "Skills",
+                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                    child: Text( "Resume",
+                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+                  ),
                 ],
               ),
             ),
             body: TabBarView(
               children: [
-                Text("PortFolio"),
-                Text("Skills"),
-                Text("Resume"),
+                Portfolio(),
+                Skills(),
+                Resume(),
               ],
             ),
           )
