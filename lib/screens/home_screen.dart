@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
+import '../widgets/info_widget.dart';
 import '../widgets/profile_widget.dart';
 
 
@@ -16,9 +17,7 @@ class MyHomePage extends StatelessWidget {
     return Material(
       child: SlidingUpPanel(
         backdropEnabled: false,
-        panel: Center(
-          child: Text("This is the sliding Widget"),
-        ),
+        panel: InfoDetails(),
         body: Scaffold(
           body:  ProfileDetails(),
         ),

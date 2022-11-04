@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
+
 
 class ProfileDetails extends StatelessWidget {
   const ProfileDetails({Key? key}) : super(key: key);
@@ -12,6 +16,8 @@ class ProfileDetails extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       alignment: Alignment.center,
       child: Card(
+        margin: EdgeInsets.only(left: 50.0, right: 50.0),
+        color: Colors.blue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -38,13 +44,13 @@ class ProfileDetails extends StatelessWidget {
                 children: <Widget>[
                   IconButton(
                     icon: FaIcon(FontAwesomeIcons.twitter),
-                    onPressed: () { print("Pressed"); }),
+                    onPressed:  (){_launchUrl("https://twitter.com/BenjOkezie");}),
                   IconButton(
                       icon: FaIcon(FontAwesomeIcons.linkedin),
-                      onPressed: () { print("Pressed"); }),
+                      onPressed: () { _launchUrl("https://www.linkedin.com/in/okeziebenj/");}),
                   IconButton(
                       icon: FaIcon(FontAwesomeIcons.github),
-                      onPressed: () { print("Pressed"); }),
+                      onPressed: () { _launchUrl("https://github.com/Avivar101"); }),
                   IconButton(
                       icon: FaIcon(FontAwesomeIcons.globe),
                       onPressed: () { print("Pressed"); }),
@@ -55,5 +61,13 @@ class ProfileDetails extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Future<void> _launchUrl(String url) async {
+  final Uri _url = Uri.parse(url);
+
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
   }
 }
