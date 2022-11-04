@@ -47,9 +47,7 @@ The layout and design of the app came from [https://www.behance.net/gallery/9662
 
 Well I would go ahead to implement the auto dark/light theme,
 
-Put in a proper launcher icon
-
-fix or remove the sliding_up_panel, installed it on my device and it doesn't functino properly
+fix or remove the sliding_up_panel, installed it on my device and it doesn't function properly, on launch it doesn't display the information in it, after a couple clicks here and there before it shows.
 
 
 ### APK LINK
