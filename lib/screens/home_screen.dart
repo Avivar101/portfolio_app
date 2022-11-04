@@ -14,7 +14,8 @@ class MyHomePage extends StatelessWidget {
       topLeft: Radius.circular(24.0),
       topRight: Radius.circular(24.0),
     );
-    return Material(
+    return Container(
+      color: Colors.blue,
       child: SlidingUpPanel(
         backdropEnabled: false,
         panel: InfoDetails(),

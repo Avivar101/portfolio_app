@@ -5,6 +5,6 @@ class Skills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Text("Skills");
   }
 }

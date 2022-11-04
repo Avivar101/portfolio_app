@@ -11,13 +11,11 @@ class ProfileDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
       height: MediaQuery.of(context).size.height * 0.5,
       width: MediaQuery.of(context).size.width,
       alignment: Alignment.center,
       child: Card(
         margin: EdgeInsets.only(left: 50.0, right: 50.0),
-        color: Colors.blue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

@@ -16,8 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Padding(
+      home: Container(
         padding: EdgeInsets.all(8.0),
+          color: Colors.black,
           child: const MyHomePage(),
       ),
     );
