@@ -15,45 +15,61 @@ class ProfileDetails extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       alignment: Alignment.center,
       child: Card(
-        margin: EdgeInsets.only(left: 50.0, right: 50.0),
+        margin: const EdgeInsets.only(left: 50.0, right: 50.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: Image.asset(
-                  'assets/profilepic.jpg',
-                  width: 150,
-                  height: 150,
-                  fit: BoxFit.cover,
-                  semanticLabel: "Benji",
-                ),
-              )
-            ),
-            SizedBox(height: 5.0),
-            Container(child: Text("Okezie Ben-John"),),
-            SizedBox(height: 5.0),
-            Container(child: Text("App Dev (Flutter)"),),
-            SizedBox(height: 5.0),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  IconButton(
-                    icon: FaIcon(FontAwesomeIcons.twitter),
-                    onPressed:  (){_launchUrl("https://twitter.com/BenjOkezie");}),
-                  IconButton(
-                      icon: FaIcon(FontAwesomeIcons.linkedin),
-                      onPressed: () { _launchUrl("https://www.linkedin.com/in/okeziebenj/");}),
-                  IconButton(
-                      icon: FaIcon(FontAwesomeIcons.github),
-                      onPressed: () { _launchUrl("https://github.com/Avivar101"); }),
-                  IconButton(
-                      icon: FaIcon(FontAwesomeIcons.globe),
-                      onPressed: () { print("Pressed"); }),
-                ],
+            ClipRRect(
+              borderRadius: BorderRadius.circular(100),
+              child: Image.asset(
+                'assets/profilepic.jpg',
+                width: 150,
+                height: 150,
+                fit: BoxFit.cover,
+                semanticLabel: "Benji",
               ),
+            ),
+            const SizedBox(height: 5.0),
+            const Text(
+                "Okezie Ben-John",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  fontSize: 25
+                )
+            ),
+            const SizedBox(height: 5.0),
+            const Text(
+                "App Dev (Flutter)",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15
+                )
+            ),
+            const SizedBox(height: 5.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                IconButton(
+                  icon: const FaIcon(FontAwesomeIcons.twitter),
+                  onPressed:  (){_launchUrl("https://twitter.com/BenjOkezie");},
+                  color: Colors.black,
+                ),
+                IconButton(
+                    icon: const FaIcon(FontAwesomeIcons.linkedin),
+                    onPressed: () { _launchUrl("https://www.linkedin.com/in/okeziebenj/");},
+                  color: Colors.black,
+                ),
+                IconButton(
+                    icon: const FaIcon(FontAwesomeIcons.github),
+                    onPressed: () { _launchUrl("https://github.com/Avivar101"); },
+                  color: Colors.black,
+                ),
+                IconButton(
+                    icon: const FaIcon(FontAwesomeIcons.globe),
+                    onPressed: () { print("Pressed"); }),
+              ],
             )
           ],
         ),

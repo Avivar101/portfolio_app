@@ -11,7 +11,7 @@ class InfoDetails extends StatelessWidget {
     return Container(
       color: Colors.transparent,
 
-      child: DefaultTabController(
+      child: const DefaultTabController(
           length: 3,
           child: Scaffold(
             backgroundColor: Colors.transparent,
