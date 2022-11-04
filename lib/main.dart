@@ -14,9 +14,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Benji',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: Padding(
+        padding: EdgeInsets.all(8.0),
+          child: const MyHomePage(),
+      ),
     );
   }
 }

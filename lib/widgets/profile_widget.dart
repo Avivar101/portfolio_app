@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfileDetails extends StatelessWidget {
   const ProfileDetails({Key? key}) : super(key: key);
@@ -6,6 +7,7 @@ class ProfileDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.blue,
       height: MediaQuery.of(context).size.height * 0.5,
       width: MediaQuery.of(context).size.width,
       alignment: Alignment.center,
@@ -30,7 +32,25 @@ class ProfileDetails extends StatelessWidget {
             SizedBox(height: 5.0),
             Container(child: Text("App Dev (Flutter)"),),
             SizedBox(height: 5.0),
-            Container(child: Text("Links"),)
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  IconButton(
+                    icon: FaIcon(FontAwesomeIcons.twitter),
+                    onPressed: () { print("Pressed"); }),
+                  IconButton(
+                      icon: FaIcon(FontAwesomeIcons.linkedin),
+                      onPressed: () { print("Pressed"); }),
+                  IconButton(
+                      icon: FaIcon(FontAwesomeIcons.github),
+                      onPressed: () { print("Pressed"); }),
+                  IconButton(
+                      icon: FaIcon(FontAwesomeIcons.globe),
+                      onPressed: () { print("Pressed"); }),
+                ],
+              ),
+            )
           ],
         ),
       ),
